@@ -21,6 +21,6 @@ int addOne(int x) => x + 1;
 int square(int x) => x * x;
 int subtract10(int x) => x - 10;
 
-extension FunctionCompose<I, M> on M Function(I) {
+extension FunctionComposition<I, M> on M Function(I) {
   O Function(I) compose<O>(O Function(M) g) => (I x) => g(this(x));
 }

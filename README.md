@@ -9,7 +9,7 @@ From [Mohamed Hamed Hammad FP playlist](https://www.youtube.com/playlist?list=PL
 This is a piece of art : )
 
 ```dart
-extension FunctionCompose<I, M> on M Function(I) {
+extension FunctionComposition<I,M> on M Function(I) {
   O Function(I) compose<O>(O Function(M) g) => (I x) => g(this(x));
 }
 ```
