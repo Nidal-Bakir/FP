@@ -5,7 +5,7 @@ typedef Rule = ({
   double Function(Order) discountCalc
 });
 
-typedef Rules = List<Rule>;
+typedef Rules = UnmodifiableListView<Rule>;
 
 extension AverageOrNull on Iterable<num> {
   double? get averageOrNull => isEmpty ? null : sum / length;
@@ -32,12 +32,12 @@ Order getOrderWithDiscount(Order order, Rules rules) {
   return order.copyWith(discount: discount);
 }
 
-const rules = <Rule>[
+final rules = Rules([
   (qualifier: isQualifiedForA, discountCalc: calcDiscountBasedOnRuleA),
   (qualifier: isQualifiedForB, discountCalc: calcDiscountBasedOnRuleB),
   (qualifier: isQualifiedForC, discountCalc: calcDiscountBasedOnRuleC),
   (qualifier: isQualifiedForD, discountCalc: calcDiscountBasedOnRuleD),
-];
+]);
 
 bool isQualifiedForA(Order order) => true;
 double calcDiscountBasedOnRuleA(Order order) =>
