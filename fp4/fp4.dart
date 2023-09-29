@@ -1,4 +1,4 @@
-import 'package:collection/collection.dart';
+import '../fp_core.dart';
 
 typedef Rule = ({
   bool Function(Order) qualifier,
@@ -6,10 +6,6 @@ typedef Rule = ({
 });
 
 typedef Rules = UnmodifiableListView<Rule>;
-
-extension AverageOrNull on Iterable<num> {
-  double? get averageOrNull => isEmpty ? null : sum / length;
-}
 
 void main(List<String> arguments) {
   final ordersWithDiscount =

@@ -1,3 +1,5 @@
+import '../fp_core.dart';
+
 void main(List<String> arguments) {
   const list = [1, 2, 3, 4, 5];
 
@@ -20,7 +22,3 @@ int Function(int x) addOneSquareSubtract10() =>
 int addOne(int x) => x + 1;
 int square(int x) => x * x;
 int subtract10(int x) => x - 10;
-
-extension FunctionComposition<I, M> on M Function(I) {
-  O Function(I) compose<O>(O Function(M) g) => (I x) => g(this(x));
-}

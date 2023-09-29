@@ -13,3 +13,4 @@ extension FunctionComposition<I,M> on M Function(I) {
   O Function(I) compose<O>(O Function(M) g) => (I x) => g(this(x));
 }
 ```
+<img src="./fp5/function_composition_diagram_2.png">
