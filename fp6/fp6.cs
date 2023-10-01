@@ -6,8 +6,8 @@ namespace Declarative
 
         public static void Main(string[] args)
         {
-            InvoicingPath InvoicePath = new InvoicingPath();
-            AvailabilityPath AvailabilityPath = new AvailabilityPath();
+            var InvoicePath = new InvoicingPath();
+            var AvailabilityPath = new AvailabilityPath();
             (Order order, ProcessConfiguration processConfiguration) = setConfiguration();
 
             Func<Order, Double> CostOfOrder = CalcAdjustedCostofOrder(processConfiguration, InvoicePath, AvailabilityPath);
@@ -19,9 +19,9 @@ namespace Declarative
         //Setup of the Process Configuration and Data
         public static (Order order, ProcessConfiguration processConfiguration) setConfiguration()
         {
-            ProcessConfiguration processConfiguration = new ProcessConfiguration();
-            Customer customer = new Customer();
-            Order order = new Order();
+            var processConfiguration = new ProcessConfiguration();
+            var customer = new Customer();
+            var order = new Order();
             processConfiguration.invoiceChoice = InvoiceChoice.Inv3;
             processConfiguration.shippingChoice = ShippingChoice.Sh2;
             processConfiguration.freightChoice = FreightChoice.fr3;
