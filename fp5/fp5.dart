@@ -1,4 +1,4 @@
-import '../fp_core.dart';
+import '../fp_core/fp_core.dart';
 
 void main(List<String> arguments) {
   const list = [1, 2, 3, 4, 5];

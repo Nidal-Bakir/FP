@@ -1,4 +1,4 @@
-import '../fp_core.dart';
+import '../fp_core/fp_core.dart';
 
 typedef Rule = ({
   bool Function(Order) qualifier,

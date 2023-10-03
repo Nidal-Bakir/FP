@@ -1,4 +1,4 @@
-import '../fp_core.dart';
+import '../fp_core/fp_core.dart';
 
 void main(List<String> arguments) {
   final calcSalaryWithTaxForIndividual = calcSalaryWithTax(1.3);

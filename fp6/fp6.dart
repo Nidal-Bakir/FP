@@ -1,4 +1,4 @@
-import '../fp_core.dart';
+import '../fp_core/fp_core.dart';
 import 'objects.dart';
 
 void main(List<String> arguments) {
